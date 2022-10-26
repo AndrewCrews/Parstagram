@@ -6,83 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="76dp"
-        android:layout_below="@+id/description"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="208dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="17dp"
-        android:text="SUBMIT"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <EditText
-        android:id="@+id/description"
-        android:layout_width="wrap_content"
-        android:layout_height="89dp"
-        android:layout_below="@+id/ivImage"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="18dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="Type in your description"
-        android:inputType="textPersonName"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColorHint="#78909C"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="326dp" />
+    <FrameLayout
+        android:id="@+id/flContainer"
+        android:layout_width="match_parent"
+        android:layout_height="675dp"
+        android:layout_marginBottom="4dp"
+        android:rotationX="-4"
+        android:rotationY="2" />
 
-    <ImageView
-        android:id="@+id/ivImage"
-        android:layout_width="352dp"
-        android:layout_height="296dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="24dp"
-        android:contentDescription="TODO"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="19dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <Button
-        android:id="@+id/btnTakePicture"
-        android:layout_width="182dp"
-        android:layout_height="76dp"
-        android:layout_below="@+id/description"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="213dp"
-        android:text="TAKE PICTURE"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnSubmit"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="157dp"
-        android:text="LOGOUT" />
-
-    <ProgressBar
-        android:id="@+id/pbLoading"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnSubmit"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="-1dp"
-        android:layout_marginEnd="24dp"
-        android:visibility="invisible" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="83dp"
+        android:layout_marginBottom="-2dp"
+        app:menu="@menu/menu_bottom_navigation" />
 
 </RelativeLayout>
